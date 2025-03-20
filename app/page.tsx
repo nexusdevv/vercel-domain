@@ -10,11 +10,11 @@ export const runtime = 'edge';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://vercel-domain.vercel.app/'),
-  title: 'Advanced Vercel Domain Checker',
-  description: 'Check domain availability across multiple TLDs and get smart suggestions',
+  title: 'Vercel Domain Checker',
+  description: 'Check domain availability for vercel.app and get smart suggestions',
   openGraph: {
-    title: 'Advanced Vercel Domain Checker',
-    description: 'Check domain availability across multiple TLDs and get smart suggestions',
+    title: 'Vercel Domain Checker',
+    description: 'Check domain availability for vercel.app and get smart suggestions',
     url: 'https://vercel-domain.vercel.app/',
     type: 'website',
     images: '/og-image.png',

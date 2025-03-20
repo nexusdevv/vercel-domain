@@ -7,16 +7,16 @@ import { Analytics } from '@vercel/analytics/react';
 import BackgroundGridMobile from '@/components/background-grid-mobile';
 
 export const metadata: Metadata = {
-  title: 'Advanced Domain Finder - Check & Find Perfect Domain Names',
+  title: 'Vercel Domain Checker - Check & Find Perfect Domain Names',
   description: 'Find available domains with smart suggestions and alternatives for Vercel hosted projects',
   keywords: 'domain checker, vercel domain, domain finder, domain name, domain search, available domains',
   viewport: 'width=device-width, initial-scale=1',
   themeColor: '#000000',
   openGraph: {
     type: 'website',
-    title: 'Advanced Domain Finder',
+    title: 'Vercel Domain Checker',
     description: 'Check domain availability for vercel.app and get smart suggestions',
-    siteName: 'Advanced Domain Finder',
+    siteName: 'Vercel Domain Checker',
     images: '/og-image.png'
   },
   twitter: {
