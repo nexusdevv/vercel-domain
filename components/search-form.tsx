@@ -32,9 +32,10 @@ const SearchForm = ({ className }: SearchFormProps) => {
   const [alternativeSuggestions, setAlternativeSuggestions] = useState<AlternativeResult[]>([]);
   const [showAlternatives, setShowAlternatives] = useState(false);
 
-  // Özel karakter kontrolü
+  // Özel karakter kontrolü - Vercel domain kurallarına göre düzenlendi
   const containsSpecialChars = (str: string) => {
-    const specialChars = /[!@#$%^&*()+\-=\[\]{};':"\\|,.<>\/?]+/;
+    // Tire karakteri (-) Vercel domain adlarında geçerlidir
+    const specialChars = /[!@#$%^&*()+={}\[\];':"\\|,.<>\/?]+/;
     return specialChars.test(str);
   };
 
@@ -80,7 +81,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
     // Özel karakter kontrolü
     if (containsSpecialChars(searchAppName)) {
       toast.error('Invalid Characters', {
-        description: 'Domain names cannot contain special characters like !@#$%^&*(){}[]',
+        description: 'Domain names cannot contain special characters like !@#$%^&*(){}[]. Hyphens (-) are allowed.',
         icon: <AlertCircle className="h-5 w-5 text-red-500" />
       });
       return;

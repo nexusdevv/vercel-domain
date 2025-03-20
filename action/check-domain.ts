@@ -4,6 +4,7 @@
 export async function checkDomainExist(appName: string, tld: string = 'vercel.app') {
   try {
     // Özel karakterleri kontrol et ve temizle
+    // Tire (-) karakterine izin verildiği için normal şekilde devam ediyoruz
     const sanitizedName = appName.toLowerCase().trim();
     
     // Sadece vercel.app domainlerini kontrol etmek için, tld parametresini yok sayıyoruz
