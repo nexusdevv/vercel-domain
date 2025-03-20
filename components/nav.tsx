@@ -24,6 +24,12 @@ const Nav = () => {
           </a>
         </Button>
 
+        <Button variant="ghost" className="px-4">
+          <a href="/about" className="flex items-center">
+            <span className="text-sm font-medium whitespace-nowrap">About</span>
+          </a>
+        </Button>
+
         <div className="h-5 w-px bg-gray-300"></div>
         
         <Button size="icon" variant="ghost">

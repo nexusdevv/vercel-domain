@@ -50,10 +50,10 @@ const CreditsPage = () => {
           </div>
           
           <div className="bg-slate-50 rounded-xl p-6 border border-slate-200">
-            <h2 className="text-2xl font-semibold mb-3">Advanced Version</h2>
+            <h2 className="text-2xl font-semibold mb-3">Remastered Version</h2>
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
-                <p className="font-medium">Batuhan</p>
+                <p className="font-medium">Batuhan (@nexusdevv)</p>
                 <p className="text-gray-600 text-sm mt-1">
                   Added new features and improved the design of the original tool.
                 </p>
@@ -84,7 +84,7 @@ const CreditsPage = () => {
               href="/"
               className="inline-block px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition"
             >
-              Back to Domain Finder
+              Back to Domain Checker
             </a>
           </div>
         </div>
