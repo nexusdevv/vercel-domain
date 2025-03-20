@@ -129,10 +129,10 @@ const SearchForm = ({ className }: SearchFormProps) => {
                 handleSubmit();
               }
             }}
-            className="bg-white"
+            className="bg-white pr-24"
             placeholder="Enter domain name"
           />
-          <span className="text-lg lg:text-xl ml-2 absolute right-3 top-1/2 -translate-y-1/2 text-gray-500">.vercel.app</span>
+          <span className="text-sm lg:text-base absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 bg-white px-1">.vercel.app</span>
         </div>
       </div>
       
