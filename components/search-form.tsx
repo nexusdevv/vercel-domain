@@ -32,25 +32,25 @@ const SearchForm = ({ className }: SearchFormProps) => {
   const [alternativeSuggestions, setAlternativeSuggestions] = useState<AlternativeResult[]>([]);
   const [showAlternatives, setShowAlternatives] = useState(false);
 
-  // Özel karakter kontrolü - Vercel domain kurallarına göre düzenlendi
+  // special character checker
   const containsSpecialChars = (str: string) => {
-    // Tire karakteri (-) Vercel domain adlarında geçerlidir
+    // fix for the minus problem
     const specialChars = /[!@#$%^&*()+={}\[\];':"\\|,.<>\/?]+/;
     return specialChars.test(str);
   };
 
-  // Büyük harf kontrolü
+  // upper letters cehecker
   const containsUppercase = (str: string) => {
     return /[A-Z]/.test(str);
   };
 
-  // Alternatif domain önerilerini kontrol et
+  // alternative domain checker
   const checkAlternativeDomains = async () => {
     if (!searchAppName) return;
     
     const alternatives = generateAlternativeDomains(searchAppName);
     
-    // En fazla 5 alternatif göster
+    // max 5
     const limitedAlternatives = alternatives.slice(0, 5);
     
     const results = await Promise.all(
@@ -68,7 +68,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
     setShowAlternatives(true);
   };
 
-  // Ana domain kontrolü
+  // err if its blank
   const handleSubmit = async () => {
     setIsAvailable(null);
     setShowAlternatives(false);
@@ -78,7 +78,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
       return;
     }
 
-    // Özel karakter kontrolü
+    // spec character err
     if (containsSpecialChars(searchAppName)) {
       toast.error('Invalid Characters', {
         description: 'Domain names cannot contain special characters like !@#$%^&*(){}[]. Hyphens (-) are allowed.',
@@ -87,7 +87,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
       return;
     }
 
-    // Büyük harf uyarısı
+    // upper letter warn
     if (containsUppercase(searchAppName)) {
       toast.warning('Uppercase Letters Detected', {
         description: 'Note: Domain names are case-insensitive. We\'ll convert it to lowercase.',
@@ -108,7 +108,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
         toast.error('Unavailable', {
           description: `https://${searchAppName}.vercel.app is unavailable to use.`,
         });
-        // Domain kullanılamıyorsa alternatif önerileri kontrol et
+        // alternative
         await checkAlternativeDomains();
       }
     } catch (error) {
@@ -117,7 +117,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
     
     setIsLoading(false);
   };
-
+  // fixed, if name is long it was collapsing vercel app text
   return (
     <div className={cn('flex flex-col items-center w-full', className)}>
       <div className="flex items-center relative w-full max-w-xl">
@@ -194,7 +194,7 @@ const SearchForm = ({ className }: SearchFormProps) => {
         </Button>
       </div>
 
-      {/* Alternatif Öneriler */}
+      {/* Alternatives */}
       {showAlternatives && alternativeSuggestions.length > 0 && (
         <div className="mt-8 w-full max-w-xl">
           <h3 className="font-medium mb-3">Alternative Suggestions</h3>
