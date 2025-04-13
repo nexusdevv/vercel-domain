@@ -23,7 +23,7 @@ const CreditsPage = () => {
             <h2 className="text-2xl font-semibold mb-3">Original Creator</h2>
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
               <div>
-                <p className="font-medium">David Ho (@1weiho)</p>
+                <p className="font-medium">Yiwei Ho (@1weiho)</p>
                 <p className="text-gray-600 text-sm mt-1">
                   Created the original Vercel Domain Checker tool and open-sourced it on GitHub.
                 </p>
