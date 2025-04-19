@@ -43,7 +43,7 @@ const Nav = () => {
         </Button>
         
         <Button size="icon" variant="ghost">
-          <a href="https://instagram.com/batuhan13485" target="_blank" rel="noopener noreferrer">
+          <a href="https://instagram.com/bbatuu.u" target="_blank" rel="noopener noreferrer">
             <Instagram className="h-5 w-5" />
           </a>
         </Button>
