@@ -68,7 +68,7 @@ const CreditsPage = () => {
                   <Github className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://instagram.com/batuhan13485" 
+                  href="https://instagram.com/bbatuu.u" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="p-2 bg-slate-100 rounded-lg hover:bg-slate-200 transition"
